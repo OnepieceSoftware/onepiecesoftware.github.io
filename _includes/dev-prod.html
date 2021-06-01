@@ -1,0 +1,29 @@
+
+<!-- Blog Start -->
+
+<section id="{{ page.section-type }}" class="container content-section text-center">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+    {{ page.content | markdownify }}
+
+    <h4><small>
+    {% for category in site.categories %}
+      {% if category[0] == "project" or category[0] == "talk" or category[0] == "blog" or category[0] == "magazine article" %}
+      <a class="category" href="{{site.baseurl}}/categories/{{ category | first | downcase }}.html">
+        {{ category | first }}
+      </a>
+      {% if category[0] != "blog" %} | {% endif %}
+      {% endif %}
+    {% endfor %}
+    </small></h4>
+
+    <div>
+      {% for post in site.categories.dev-prod %}
+        {% include post-list.html%}
+      {% endfor %}
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog End -->
