@@ -6,7 +6,7 @@ category: project
 tags: [ ]
 ---
 
-I am helping out in game projects with my experience in development and technical leadership.
+I am supporting game projects with my experience in development and technical leadership.
 
 If you think I may be able to help you in your project,
-<a href="mailto:jendrik.johannes@gmail.com">please reach out to me</a>.
+<a href="mailto:jendrik@onepiece.software">please reach out to me</a>.

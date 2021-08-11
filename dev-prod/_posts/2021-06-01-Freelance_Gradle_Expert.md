@@ -11,4 +11,4 @@ I offer my experience for consulting you on your projects if you use Gradle or p
 I also offer in-house workshops on general or specific Gradle topics. 
 
 If you think I may be able to help you in your project,
-<a href="mailto:jendrik.johannes@gmail.com">please reach out to me</a>.
+<a href="mailto:jendrik@onepiece.software">please reach out to me</a>.
