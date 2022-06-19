@@ -1,307 +1,524 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <title>onepiece.Software</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/datepicker.min.css" >
     <link rel="stylesheet" href="css/styles.css" >
-    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 </head>
 
 <body><div class="content">
 
+<div style="text-align: right;">
+  <button class="lang" id="en">English</button>
+  <button class="lang" id="de">Deutsch</button>
+</div>
 
 <h1 class="main">onepiece.Software</h1>
+<h1 class="sub" data-i18n="main-header"></h1>
+<div>by <i><a href="#jendrik">Jendrik Johannes</a></i></div>
 
-by <i>Jendrik Johannes</i>
-
-<br/>
 <div style="font-size: 35px; padding-top: 20px;">
     <a href="https://twitter.com/jeoj" title="Twitter"><i class="fab fa-twitter fa-fw"></i></a>
-    <a href="mailto:jendrik@onepiece.software" title="Mail"><i class="fas fa-envelope fa-fw"></i></a>
     <a href="https://github.com/jjohannes" title="GitHub"><i class="fab fa-github fa-fw"></i></a>
     <a href="https://www.youtube.com/playlist?list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" title="YouTube"><i class="fab fa-youtube fa-fw"></i></a>
+    <a href="mailto:jendrik@onepiece.software" title="Mail"><i class="fas fa-envelope fa-fw"></i></a>
 </div>
 
-<div class="justify">
-    Hi! I am Jendrik and I work on software (20 years and counting).
-    Software is everywhere and developing it is both <i>awesomely</i> <b>fascinating</b> and <i>frustratingly</i> <b>complex</b>.
-    I believe a key factor to craft good software is avoiding <i>accidental</i> complexity, by structuring products in terms of <i>connected</i> components and systems.
-    Designing the connections between these is as important as the components and systems themselves.
-    We need to embrace the fact that everything needs to work together in harmony to form the final product.
-    However you turn it, in the end, a software product is a <b>onepiece</b> where everything is connected.
+<div style="padding-top: 20px;">
+  <button><a class="button" href="#training"   data-i18n="button-training"></a></button>
+  <button><a class="button" href="#consulting" data-i18n="button-consulting"></a></button>
+  <button><a class="button" href="#online"     data-i18n="button-online"></a></button>
+  <button><a class="button" href="#plugins"    data-i18n="button-plugins"></a></button>
 </div>
 
-<div class="justify">
-    If you work on software and suffer from accidental complexity, maybe I can help?
-</div>
+<h2 id="training"><img src="img/gradle-icon.png"> <span data-i18n="header-training"></span> <img src="img/gradle-icon.png"></h2>
+<h2 class="sub" data-i18n="header-training-sub"></h2>
+
+<section>
+  <button id="t0" data-i18n="training-title0" class="small"></button>
+  <button id="t1" data-i18n="training-title1" class="small"></button>
+  <button id="t2" data-i18n="training-title2" class="small selected"></button>
+  <button id="t3" data-i18n="training-title3" class="small"></button>
+  <button id="t4" data-i18n="training-title4" class="small"></button>
+  <button id="t5" data-i18n="training-title5" class="small"></button>
+
+  <div class="box">
+    <ul>
+      <li><b data-i18n="training-basics-title"></b></li>
+      <li data-i18n="training-basics-1"></li>
+      <li data-i18n="training-basics-2"></li>
+    </ul>
+  </div>
+
+  <div class="box" id="day1">
+    <ul>
+      <li><b data-i18n="t-phylosophy"></b></li>
+      <li>
+        <span>🧬 <span data-i18n="t-modelling"></span></span>
+        <span>💬 Gradle DSL</span>
+      </li>
+      <li><b data-i18n="t-structure"></b></li>
+      <li>
+        <span>📝 Settings File</span> 
+        <span>🗂️ Build Files</span> 
+        <span>🔌 Plugins</span> 
+        <span>✏️ Build Configuration <span data-i18n="w-with"></span> Convention Plugins</span></li>
+      <li><b data-i18n="t-efficient"></b></li>
+      <li>
+        <span>▶️ Tasks</span> 
+        <span>↔️ Task Inputs/Outputs</span> 
+        <span>🔄 Task Dependencies</span> 
+        <span>🏎️ Incremental Builds</span> 
+        <span>🗄️ Build Cache</span> 
+        <span>📋 <span data-i18n="t-task-configure"></span></span> 
+        <span>🐒 <span data-i18n="t-task-implement"></span></span> 
+        <span>🦥 Lazy Configuration</span> 
+        <span>💨 Configuration vs. Execution Time</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="box" id="day2">
+    <ul>
+      <li><b>Dependency Management <span data-i18n="w-with"></span> Gradle</b></li>
+      <li>
+        <span id="d-java0">🔍 Dependency Scopes (implementation/api/runtimeOnly)</span>
+
+        <span id="d-modules0" class="invisible">📄 moulde-info.java</span>
+        <span id="d-modules1" class="invisible">🔍 Require Directives (require/transitive/static)</span>
+        <span id="d-modules2" class="invisible">🧳 Non-Module Jars</span>
+
+        <span id="d-android0" class="invisible">🧺 Build Types</span>
+        <span id="d-android1" class="invisible">⛱️ Flavors</span>
+
+        <span>🧞 Configurations <span data-i18n="w-and"></span> Variants</span>
+        <span>🗄️ Maven Repositories</span>
+        <span>🔥 Version Confilicts</span>
+        <span>❄️ Capability Confilicts</span>
+        <span>📜 Component Metadata Rules</span>
+        <span>🧵 Centralizing Versions</span>
+      </li>
+      <li><b>Testing <span data-i18n="w-with"></span> Gradle</b></li>
+      <li>
+        <span>🗂️ Source Sets</span>
+        <span>🎁 Test Suites</span>
+        <span id="d-modules3" class="invisible">📦 Whitebox vs. Blackbox</span>
+        <span id="d-android2" class="invisible">📱 On-device Tests</span>
+        <span>5️⃣ Testing <span data-i18n="w-with"></span> JUnit 5</span> 
+        <span>📝 <span data-i18n="t-task-configure-test"></span></span> 
+        <span>🗂️ Integration <span data-i18n="w-and"></span> End-to-End Tests</span> 
+        <span>⛓️ Parallel Test Execution</span> 
+        <span>🗒️ Test Reporting</span>
+        <span>🚦 Code Coverage</span>
+        <span>🧰 Test Fixtures</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="box" id="day3">
+    <ul>
+      <li><b data-i18n="t-maitaining"></b></li>
+      <li>
+        <span>🧶 <span data-i18n="t-lifecycle-tasks"></span></span>
+        <span>🧱 <span data-i18n="t-build-app"></span></span>
+        <span>📖 <span data-i18n="t-structuring"></span></span>
+        <span>ℹ️ <span data-i18n="t-help-tasks"></span></span>
+        <span>💬 <span data-i18n="t-dep-analysis"></span></span>
+        <span>🔧 <span data-i18n="t-tune"></span></span>
+        <span>🚀 <span data-i18n="t-local"></span></span>
+        <span>🚢 <span data-i18n="t-ci"></span></span>
+        <span>📠 <span data-i18n="t-scans"></span></span>
+      </li>
+    </ul>
+  </div>
 
 
-<a id="understanding-gradle"></a>
-<h2><img src="img/youtube-icon.png"/> Understanding Gradle</h2>
+  <div class="box invisible" id="individual">
+    <ul>
+      <li><b data-i18n="training-tailored" style="font-size: 26px;"></b></li>
+    </ul>
+  </div>
 
-<div class="justify">
-    I share best practices for well-structrued and maintainable Grade projects on my <a href="https://www.youtube.com/playlist?list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank">YouTube channel</a>.
-</div>
+  <div class="box">
+    <b data-i18n="interested-1"></b> <b><a data-i18n="interested-2" href="mailto:jendrik@onepiece.software"></a></b> <b data-i18n="interested-3"></b>
+  </div>
 
-<div class="section">
-  <div class="video-preview">
-      <img class="downscale" src="img/videos/01.png" alt="The Settings File">
-      <div class="overlay">
-        <a href="https://www.youtube.com/watch?v=Ajs8pTbg8as&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
-          <i class="fab fa-youtube"></i>
-        </a>
-        &nbsp;
-        <a href="https://github.com/jjohannes/understanding-gradle/tree/main/01_The_Settings_File" target="_blank" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
+  <div id="not-yet-booked1" class="box">
+    <div class="row">
+      <div class="column">
+        <select id="input-interest">
+          <option value="-1" data-i18n="training-select"></option>
+          <option id="o0" value="0" data-i18n="training-short0"></option>
+          <option id="o1" value="1" data-i18n="training-short1"></option>
+          <option id="o2" value="2" data-i18n="training-short2" selected="selected"></option>
+          <option id="o3" value="3" data-i18n="training-short3"></option>
+          <option id="o4" value="4" data-i18n="training-short4"></option>
+          <option id="o5" value="5" data-i18n="training-short5"></option>
+        </select>
+        <input id="input-name" type="text" class="required" placeholder="* Name"/>
+        <input id="input-mail" type="text" class="required" placeholder="* Mail"/>
+        <input id="input-company" type="text" placeholder="Company"/>
+        <input id="input-team" type="text" placeholder="Team Size"/>
+        <textarea id="input-message" type="text" placeholder="Message"></textarea>
+
       </div>
-  </div>
-  <div class="video-preview">
-      <img class="downscale" src="img/videos/02.png" alt="The Build Files">
-      <div class="overlay">
-        <a href="https://www.youtube.com/watch?v=OKjE_Lt_66U&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
-          <i class="fab fa-youtube"></i>
-        </a>
-        &nbsp;
-        <a href="https://github.com/jjohannes/understanding-gradle/tree/main/02_The_Build_Files" target="_blank" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
+      <div class="column">
+        <button class="long" id="button-mail" data-i18n="training-mail" disabled></button>
+        <div id="slot-container"></div>
+        <i data-i18n="training-select-date"></i>
       </div>
-  </div>
-  <div class="video-preview">
-      <img class="downscale" src="img/videos/03.png" alt="Plugins">
-      <div class="overlay">
-        <a href="https://www.youtube.com/watch?v=N95YI-szd78&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
-          <i class="fab fa-youtube"></i>
-        </a>
-        &nbsp;
-        <a href="https://github.com/jjohannes/understanding-gradle/tree/main/03_Plugins" target="_blank" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
+      <div class="column">
+        <div id="calendar"></div>
       </div>
+    </div>
+    <div data-i18n="training-consent" class="smalltext"></div>
   </div>
-  <div class="video-preview">
-      <img class="downscale" src="img/videos/04.png" alt="Tasks">
-      <div class="overlay">
-        <a href="https://www.youtube.com/watch?v=9tY4MFEgmgM&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
-          <i class="fab fa-youtube"></i>
-        </a>
-        &nbsp;
-        <a href="https://github.com/jjohannes/understanding-gradle/tree/main/04_Tasks" target="_blank" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
+
+  <div id="slot-booked1" class="box highlighted invisible">
+    <b data-i18n="thank-you"></b>
+  </div>
+</section>
+
+<h2 id="consulting"><img src="img/gradle-icon.png"> <span data-i18n="header-consulting"></span> <img src="img/gradle-icon.png"></h2>
+<h2 class="sub"></h2>
+
+<section>
+  <div class="box">
+    <ul>
+      <li><b data-i18n="consulting-1"></b></li>
+      <li>✨ <span data-i18n="consulting-2"></span></li>
+      <li>🏁 <span data-i18n="consulting-3"></span></li>
+      <li>📦 <span data-i18n="consulting-4"></span></li>
+      <li>🐜 <span data-i18n="consulting-5"></span></li>
+      <li>📞 <span data-i18n="consulting-6"></span></li>
+      <li>💬 <span data-i18n="consulting-7"></span></li>
+    </ul>
+  </div>
+  <div class="box">
+    <ul>
+      <li><b data-i18n="consulting-8"></b></li>
+      <li>
+        <span>☕ Java</span>
+        <span>🏝️ Kotlin</span>
+        <span>📦 Java Modules</span>
+        <span>🤖 Android</span>
+        <span>⭐ Groovy</span>
+        <span>💈 Scala</span>
+        <span>🐈‍⬛ Web Applications</span>
+        <span>🍃 Spring Boot</span>
+        <span>😀 [Your Software]</span>
+      </li>
+    </ul>
+  </div>
+  <div class="box">
+    <b data-i18n="interested-1"></b> <b><a data-i18n="interested-2" href="mailto:jendrik@onepiece.software"></a></b> <b data-i18n="interested-3"></b>
+  </div>
+  <div id="not-yet-booked2" class="box">
+    <div class="row">
+      <div class="column">
+        <input id="input-name2" type="text" class="required" placeholder="* Name"/>
+        <input id="input-mail2" type="text" class="required" placeholder="* Mail"/>
+        <input id="input-company2" type="text" placeholder="Company"/>
+        <textarea id="input-message2" type="text" placeholder="Message"></textarea>
       </div>
-  </div>
-  <div class="video-preview">
-    <img class="downscale" src="img/videos/05.png" alt="Lifecycle Tasks">
-    <div class="overlay">
-      <a href="https://www.youtube.com/watch?v=sOo0p4Gpjcc&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>
-      &nbsp;
-      <a href="https://github.com/jjohannes/understanding-gradle/tree/main/05_Lifecycle_Tasks" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
+      <div class="column">
+        <button class="long" id="button-mail2" data-i18n="training-mail" disabled></button>
+        <div id="slot-container2"></div>
+        <i data-i18n="training-select-date"></i>
+      </div>
+      <div class="column">
+        <div id="calendar2"></div>
+      </div>
     </div>
+    <div data-i18n="training-consent" class="smalltext"></div>
   </div>
-  <div class="video-preview">
-    <img class="downscale" src="img/videos/06.png" alt="Configuring Task Inputs and Outputs">
-    <div class="overlay">
-      <a href="https://www.youtube.com/watch?v=Pj9hSRauiQM&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>
-      &nbsp;
-      <a href="https://github.com/jjohannes/understanding-gradle/tree/main/06_Configuring_Task_Inputs_And_Outputs" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
+  <div id="slot-booked2" class="box highlighted invisible">
+    <b data-i18n="thank-you"></b>
   </div>
-  <div class="video-preview">
-    <img class="downscale" src="img/videos/07.png" alt="Implementing Tasks and Extensions">
-    <div class="overlay">
-      <a href="https://www.youtube.com/watch?v=wrgyUKC7vOY&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>
-      &nbsp;
-      <a href="https://github.com/jjohannes/understanding-gradle/tree/main/07_Implementing_Tasks_and_Extensions" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-  </div>
-  <div class="video-preview">
-    <img class="downscale" src="img/videos/08.png" alt="Declaring Dependencis">
-    <div class="overlay">
-      <a href="https://www.youtube.com/watch?v=igug9tbl4J4&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>
-      &nbsp;
-      <a href="https://github.com/jjohannes/understanding-gradle/tree/main/08_Declaring_Dependencis" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-  </div>
-  <div class="video-preview">
-    <img class="downscale" src="img/videos/09.png" alt="Centralizing Dependency Versions">
-    <div class="overlay">
-      <a href="https://www.youtube.com/watch?v=8044F5gc1dE&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>
-      &nbsp;
-      <a href="https://github.com/jjohannes/understanding-gradle/tree/main/09_Centralizing_Dependency_Versions" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-  </div>
-  <div class="video-preview">
-    <img class="downscale" src="img/videos/10.png" alt="Dependency Version Conflicts">
-    <div class="overlay">
-      <a href="https://www.youtube.com/watch?v=YYWhfy6c2YQ&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>
-      &nbsp;
-      <a href="https://github.com/jjohannes/understanding-gradle/tree/main/10_Dependency_Version_Conflicts" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-  </div>
-  <div class="video-preview">
-    <img class="downscale" src="img/videos/11.png" alt="Capability Conflicts">
-    <div class="overlay">
-      <a href="https://www.youtube.com/watch?v=5g20kbbqBFk&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>
-      &nbsp;
-      <a href="https://github.com/jjohannes/understanding-gradle/tree/main/11_Capability_Conflicts" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-  </div>
-  <div class="video-preview">
-    <img class="downscale" src="img/videos/12.png" alt="Publishing Libraries">
-    <div class="overlay">
-      <a href="https://www.youtube.com/watch?v=8z5KFCLZDd0&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>
-      &nbsp;
-      <a href="https://github.com/jjohannes/understanding-gradle/tree/main/12_Publishing_Libraries" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-  </div>
-  <div class="video-preview">
-    <img class="downscale" src="img/videos/13.png" alt="Aggregating Custom Artifacts">
-    <div class="overlay">
-      <a href="https://www.youtube.com/watch?v=2gPJD0mAres&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>
-      &nbsp;
-      <a href="https://github.com/jjohannes/understanding-gradle/tree/main/13_Aggregating_Custom_Artifacts" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-  </div>
-  <div class="video-preview">
-    <img class="downscale" src="img/videos/14.png" alt="Aggregating Custom Artifacts">
-    <div class="overlay">
-      <a href="https://www.youtube.com/watch?v=tlx3tzuLSWk&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>  
-      &nbsp;
-      <a href="https://github.com/jjohannes/understanding-gradle/tree/main/14_Settings_Plugins" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-  </div>
-  <div class="video-preview">
-    <img class="downscale" src="img/videos/15-1.png" alt="Full Java Project Setup">
-    <div class="overlay">
-      <a href="https://www.youtube.com/watch?v=vkwPB5JUj9g&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>  
-      &nbsp;
-      <a href="https://github.com/jjohannes/gradle-project-setup-howto/tree/main" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-  </div>
-  <div class="video-preview">
-    <img class="downscale" src="img/videos/15-2.png" alt="Full Android Project Setup">
-    <div class="overlay">
-      <a href="https://www.youtube.com/watch?v=Gt_I40SZPNU&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>  
-      &nbsp;
-      <a href="https://github.com/jjohannes/gradle-project-setup-howto/tree/android" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-  </div>
-  <div class="video-preview">
-    <img class="downscale" src="img/videos/15-3.png" alt="Full Java Module System Project Setup">
-    <div class="overlay">
-      <a href="https://www.youtube.com/watch?v=uRieSnovlVc&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>  
-      &nbsp;
-      <a href="https://github.com/jjohannes/gradle-project-setup-howto/tree/java_module_system" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-  </div>
-</div>
+</section>
 
-<a id="gradle-build-tool"></a>
-<h2><img src="img/gradle-icon.png"> The Gradle Build Tool</h2>
+<h2 id="online"><img src="img/gradle-icon.png"> <span data-i18n="header-online"></span> <img src="img/gradle-icon.png"></h2>
+<h2 class="sub"></h2>
+<section>
+  <div class="box">
+    <ul>
+      <li><b>All my content is free. If you want to support my work...</b></li>
+      <li>🗣️ Tell others about my work, <a href="https://www.youtube.com/c/onepieceSoftware">subscribe to my YouTube channel</a>, <a href="https://github.com/jjohannes">Star my GitHub repositories</a>, <a href="https://twitter.com/jeoj">follow me on Twitter</a></li>
+      <li>💬 Give feedback and ask questions: Use the YouTube comment sections or open an issue in one of my GitHub repositories</li>
+    </ul>
+  </div>
+  <div class="box">
+    <ul>
+      <li><b>How-To GitHub repositories</b></li>
+      <li>🔌 <b><a target="_blank" href="https://github.com/jjohannes/gradle-plugins-howto">gradle-plugins-howto</a></b> How to write Gradle plugins - answers to questions and alternative implementation solutions</li>
+      <li>🗂️ <b><a target="_blank" href="https://github.com/jjohannes/gradle-project-setup-howtos">gradle-project-setup-howto</a></b> How to structure a growing Gradle project with smart dependency management?</li>
+      <li>🧶 <b><a target="_blank" href="https://github.com/jjohannes/idiomatic-gradle">idiomatic-gradle</a></b> How to idiomatically structure a large build</li>
+      <li>📚 <b><a target="_blank" href="https://github.com/jjohannes/gradle-demos">gradle-demos</a></b> A collection of samples demonstrating how to do different things in Gradles</li>
+    </ul>
+  </div>
+  <div class="box">
+    <ul>
+      <li><b>Understanding Gradle video series</b></li>
+      <li>
+        <div class="video-preview">
+            <img class="downscale" src="img/videos/01.png" alt="The Settings File">
+            <div class="overlay">
+              <a href="https://www.youtube.com/watch?v=Ajs8pTbg8as&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+              &nbsp;
+              <a href="https://github.com/jjohannes/understanding-gradle/tree/main/01_The_Settings_File" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+        </div>
+        <div class="video-preview">
+            <img class="downscale" src="img/videos/02.png" alt="The Build Files">
+            <div class="overlay">
+              <a href="https://www.youtube.com/watch?v=OKjE_Lt_66U&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+              &nbsp;
+              <a href="https://github.com/jjohannes/understanding-gradle/tree/main/02_The_Build_Files" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+        </div>
+        <div class="video-preview">
+            <img class="downscale" src="img/videos/03.png" alt="Plugins">
+            <div class="overlay">
+              <a href="https://www.youtube.com/watch?v=N95YI-szd78&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+              &nbsp;
+              <a href="https://github.com/jjohannes/understanding-gradle/tree/main/03_Plugins" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+        </div>
+        <div class="video-preview">
+            <img class="downscale" src="img/videos/04.png" alt="Tasks">
+            <div class="overlay">
+              <a href="https://www.youtube.com/watch?v=9tY4MFEgmgM&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+              &nbsp;
+              <a href="https://github.com/jjohannes/understanding-gradle/tree/main/04_Tasks" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+        </div>
+        <div class="video-preview">
+          <img class="downscale" src="img/videos/05.png" alt="Lifecycle Tasks">
+          <div class="overlay">
+            <a href="https://www.youtube.com/watch?v=sOo0p4Gpjcc&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            &nbsp;
+            <a href="https://github.com/jjohannes/understanding-gradle/tree/main/05_Lifecycle_Tasks" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="video-preview">
+          <img class="downscale" src="img/videos/06.png" alt="Configuring Task Inputs and Outputs">
+          <div class="overlay">
+            <a href="https://www.youtube.com/watch?v=Pj9hSRauiQM&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            &nbsp;
+            <a href="https://github.com/jjohannes/understanding-gradle/tree/main/06_Configuring_Task_Inputs_And_Outputs" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="video-preview">
+          <img class="downscale" src="img/videos/07.png" alt="Implementing Tasks and Extensions">
+          <div class="overlay">
+            <a href="https://www.youtube.com/watch?v=wrgyUKC7vOY&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            &nbsp;
+            <a href="https://github.com/jjohannes/understanding-gradle/tree/main/07_Implementing_Tasks_and_Extensions" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="video-preview">
+          <img class="downscale" src="img/videos/08.png" alt="Declaring Dependencis">
+          <div class="overlay">
+            <a href="https://www.youtube.com/watch?v=igug9tbl4J4&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            &nbsp;
+            <a href="https://github.com/jjohannes/understanding-gradle/tree/main/08_Declaring_Dependencis" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="video-preview">
+          <img class="downscale" src="img/videos/09.png" alt="Centralizing Dependency Versions">
+          <div class="overlay">
+            <a href="https://www.youtube.com/watch?v=8044F5gc1dE&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            &nbsp;
+            <a href="https://github.com/jjohannes/understanding-gradle/tree/main/09_Centralizing_Dependency_Versions" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="video-preview">
+          <img class="downscale" src="img/videos/10.png" alt="Dependency Version Conflicts">
+          <div class="overlay">
+            <a href="https://www.youtube.com/watch?v=YYWhfy6c2YQ&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            &nbsp;
+            <a href="https://github.com/jjohannes/understanding-gradle/tree/main/10_Dependency_Version_Conflicts" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="video-preview">
+          <img class="downscale" src="img/videos/11.png" alt="Capability Conflicts">
+          <div class="overlay">
+            <a href="https://www.youtube.com/watch?v=5g20kbbqBFk&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            &nbsp;
+            <a href="https://github.com/jjohannes/understanding-gradle/tree/main/11_Capability_Conflicts" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="video-preview">
+          <img class="downscale" src="img/videos/12.png" alt="Publishing Libraries">
+          <div class="overlay">
+            <a href="https://www.youtube.com/watch?v=8z5KFCLZDd0&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            &nbsp;
+            <a href="https://github.com/jjohannes/understanding-gradle/tree/main/12_Publishing_Libraries" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="video-preview">
+          <img class="downscale" src="img/videos/13.png" alt="Aggregating Custom Artifacts">
+          <div class="overlay">
+            <a href="https://www.youtube.com/watch?v=2gPJD0mAres&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            &nbsp;
+            <a href="https://github.com/jjohannes/understanding-gradle/tree/main/13_Aggregating_Custom_Artifacts" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="video-preview">
+          <img class="downscale" src="img/videos/14.png" alt="Aggregating Custom Artifacts">
+          <div class="overlay">
+            <a href="https://www.youtube.com/watch?v=tlx3tzuLSWk&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>  
+            &nbsp;
+            <a href="https://github.com/jjohannes/understanding-gradle/tree/main/14_Settings_Plugins" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="video-preview">
+          <img class="downscale" src="img/videos/15-1.png" alt="Full Java Project Setup">
+          <div class="overlay">
+            <a href="https://www.youtube.com/watch?v=vkwPB5JUj9g&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>  
+            &nbsp;
+            <a href="https://github.com/jjohannes/gradle-project-setup-howto/tree/main" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="video-preview">
+          <img class="downscale" src="img/videos/15-2.png" alt="Full Android Project Setup">
+          <div class="overlay">
+            <a href="https://www.youtube.com/watch?v=Gt_I40SZPNU&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>  
+            &nbsp;
+            <a href="https://github.com/jjohannes/gradle-project-setup-howto/tree/android" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="video-preview">
+          <img class="downscale" src="img/videos/15-3.png" alt="Full Java Module System Project Setup">
+          <div class="overlay">
+            <a href="https://www.youtube.com/watch?v=uRieSnovlVc&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>  
+            &nbsp;
+            <a href="https://github.com/jjohannes/gradle-project-setup-howto/tree/java_module_system" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="video-preview">
+          <img class="downscale" src="img/videos/16.png" alt="Source Sets">
+          <div class="overlay">
+            <a href="https://www.youtube.com/watch?v=74PDtHkS_w4&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" target="_blank" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>  
+            &nbsp;
+            <a href="https://github.com/jjohannes/understanding-gradle/tree/main/16_Source_Sets" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
 
-<div class="justify">
-    One of the technologies I am most versed in is the <a href="https://github.com/gradle/gradle" target="_blank">Gradle Build Tool</a>
-    for automating development processes and increasing developer productivity.
-    I <a href="https://github.com/gradle/gradle/pulls?q=is%3Apr+is%3Aclosed+author%3Ajjohannes" target="_blank">worked on Gradle directly</a> 
-    for <a href="https://github.com/gradle/gradle/commits/master?author=jjohannes" target="_blank">five years</a>
-    and know (almost) all features and inner workings.
-    Most importantly, I know the best practices and which of the many rich features of the tool to use in what situation.
-</div>
-
-<div class="justify">
-    Gradle is a very powerful tool and it can most certainly be used to solve your very specific automation needs.
-    But it can be hard to navigate. Let me <b>support you</b> there. I offer:
-</div>
-
-<ul>
-    <li class="justify"><i style="color: green" class="fas fa-euro-sign fa-fw"></i>
-        <b>Individualised Gradle Trainings for Your Team.</b> Covering all the topics important for you!
-        For example: project structuring, modularization, build configuration sharing, Java projects, Android projects, 
-        Kotlin projects, Scala projects, Groovy projects, dependency management, build performance, plugins, tasks, 
-        testing, composite builds, and any other Gradle related topic.
-    </li>
-    <li class="justify"><i style="color: green" class="fas fa-euro-sign fa-fw"></i>
-        <b>Gradle Expert Consulting on Your Project.</b> Lets check your project together so you can absorb my knowledge!
-        Whether you need to modernize an old dusty project, migrate to Gradle from another tool, or just started something new that is about to grow big and complex –
-        I most certainly can support you to reach your goal more efficiently.
-        If you think this might be for you, lets <a href="mailto:jendrik@onepiece.software" title="mail">arrange a call</a> to discuss your individual needs – no strings attached.
-        Should we agree to collaborate, we will work together as pair or mob so you and your team learn along while we improve your Gradle project.
-    </li>
-</ul>
+<h2 id="plugins"><img src="img/gradle-icon.png"> <span data-i18n="header-plugins"></span> <img src="img/gradle-icon.png"></h2>
+<h2 class="sub"></h2>
+<section>
+  <div class="box">
+    <ul>
+      <li><b>Plugins maintained by me - free to use - reach out to support development and maintenance</b></li>
+      <li>🍯 <b><a target="_blank" href="https://github.com/jjohannes/extra-java-module-info">extra-java-module-info</a></b> Add Java Module information to legacy Java libraries</li>
+      <li>🔄 <b><a target="_blank" href="https://github.com/jjohannes/java-module-dependencies">java-module-dependencies</a></b> Makes Gradle respect the dependencies defined in 'module-info.java' files</li>
+      <li>🪟 <b><a target="_blank" href="https://github.com/jjohannes/java-module-testing">java-module-testing</a></b> Test Java Modules (whitebox and blackbox) without the hassle</li>
+      <li>🍐 <b><a target="_blank" href="https://github.com/jjohannes/missing-metadata-guava">missing-metadata-guava</a></b> Provides additional metadata for Guava</li>
+      <li>📖 <b><a target="_blank" href="https://github.com/jjohannes/java-ecosystem-capabilities">java-ecosystem-capabilities</a></b> Adds Capabilities to well-known Components hosted on Maven Central</li>
+    </ul>
+  </div>
+</section>
 
 
-<div class="justify">
-    Whenever you have questions regarding Gradle, do not hestiate to
-    <a href="mailto:jendrik@onepiece.software" title="Mail">get in touch</a>.
-    Maybe one of my <b>Understanding Gradle</b> videos can help you out already (check them out <a href="#understanding-gradle">above</a>)
-</div>
-
-
-<h2>Projects, Publications, Talks</h2>
-
-<div class="justify">
-    <a href="cv.html">Overview</a> of Projects I was invovled in, articles I published and talks I gave over the years.
-</div>
+<h2 id="jendrik" data-i18n="header-me"></h2>
+<h2 class="sub"></h2>
+<section>
+  <table>
+    <tr>
+      <td>
+        <img src="img/jendrik.png" alt="Jendrik Johannes" style="margin: 5px;"/>
+      </td>
+      <td>
+        <div class="justify" style="margin-left: 20px;" data-i18n="[html]about-me"></div>
+      </td>
+    </tr>
+  </table>
+  <a href="cv.html" data-i18n="header-other-sub"></a> 
+</section>
 
 <h2></h2>
-
 <div class="contact">
-    <b>Contact</b>
+    <b data-i18n="contact"></b>
 </div>
 
 <div class="contact">
@@ -320,7 +537,13 @@ by <i>Jendrik Johannes</i>
     Ust-IdNr: DE343201228
 </div>
 
-<h2></h2>
+</div>
 
-</div></body>
+<script src="js/jquery.min.js"></script>
+<script src="js/i18next.min.js"></script>
+<script src="js/jquery-i18next.min.js"></script>
+<script src="js/datepicker-full.min.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
 </html>
