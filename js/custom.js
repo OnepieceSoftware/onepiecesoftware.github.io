@@ -1,18 +1,22 @@
-let htmlLang = 'en'
+let htmlLang = navigator.language || navigator.userLanguage; 
 if (window.location.search == "?de") {
 	htmlLang = 'de'
 }
+if (window.location.search == "?en") {
+	htmlLang = 'en'
+}
+
 document.getElementById('en').onclick = () => {
 	htmlLang = 'en'
 	i18next.changeLanguage('en', (err, t) => {
-		$('.content').localize();
+		$('.allcontent').localize();
 	});	
 	refreshCalendar('en')
 }
 document.getElementById('de').onclick = () => {
 	htmlLang = 'de';
 	i18next.changeLanguage('de', (err, t) => {
-		$('.content').localize();
+		$('.allcontent').localize();
 	});
 	refreshCalendar('de')
 }
@@ -30,12 +34,26 @@ i18next.init({
 			"button-plugins": "High-quality Gradle Plugins",
 
 			"header-training": "Gradle Training",
-			"header-training-sub": "for Teams/Groups - Online or Onsite",
+			"header-training-sub": "for Teams or Groups - Online or Onsite",
 			"header-consulting": "Gradle Project Consulting",
 			"header-online": "Learn Gradle Online",
 			"header-plugins": "Gradle Plugins",
 			"header-me": "Who am I?",
 			"header-other-sub": "Projects, Publications, Talks",
+
+			"cv-header-1": "20+ years experience in software development",
+			"cv-header-2": "5 years working on Gradle (Gradle 3 to Gradle 7)",
+			"cv-header-3": "1+ years consultant and trainer for Gradle",
+			"cv-and-more": "and more",
+			"cv-phd": "PhD on Component-based Software Development",
+			"cv-company": "co-founded a bootstrapped company",
+			"cv-app": "shipped successful Android game",
+			"cv-talks": "gave talks",
+			"cv-articles": "wrote articles",
+			"cv-training": "giving Gradle trainings",
+			"cv-consulting": "helping teams with their Gradle builds",
+			"cv-online": "video series on Gradle",
+			"cv-plugins": "developing Gradle plugins",
 
 			"training-title0": "Modern\nGradle Fundamentals (1\u00a0Day)",
 			"training-title1": "Fundamentals Testing Dependencies (2\u00a0Days)",
@@ -88,7 +106,7 @@ i18next.init({
 			"consulting-3": "Starting a new project with a structure that is ready for growth",
 			"consulting-4": "Migrating to the Java Module System",
 			"consulting-5": "Migrating from Ant/Maven to Gradle",
-			"consulting-6": "Regular support for a large Gradle project",
+			"consulting-6": "Regular support for a Gradle project",
 			"consulting-7": "Help with your individual Gradle questions and issues",
 			"consulting-8": "For any kind of Gradle project",
 
@@ -105,11 +123,18 @@ i18next.init({
 				However you turn it, in the end, a software product is a <b>onepiece</b> where everything is connected.
 			`,
 
+			"onepiece": `
+				Software is everywhere and developing it is both <i>awesomely fascinating</i> but also <i>frustratingly complex</i>.
+				I believe a key factor to craft good software is avoiding <i>accidental</i> complexity by structuring products in terms of <i>connected</i> components and systems.
+				Designing the connections between these is as important as the components and systems themselves.
+				We need to embrace the fact that everything needs to work together in harmony to form the final product.
+				However you turn it, in the end, a software product is a <b>onepiece</b> where everything is connected.
+			`,
+
 			"contact": "Contact",
 
 			"w-and": "and",
 			"w-with": "with",
-
 		}
 	  },
 	  de: {
@@ -121,12 +146,26 @@ i18next.init({
 			"button-plugins": "High-quality Gradle Plugins",
 
 			"header-training": "Gradle Training",
-			"header-training-sub": "für Teams/Gruppen - Online oder Onsite",
+			"header-training-sub": "für Teams oder Gruppen - Online oder Onsite",
 			"header-consulting": "Gradle Projektberatung",
 			"header-online": "Gradle online lernen",
 			"header-plugins": "Gradle Plugins",
 			"header-me": "Wer bin ich?",
 			"header-other-sub": "Projekte, Publikationen, Vorträge",
+
+			"cv-header-1": "20+ Jahre Erfahrung in der Softwareentwicklung",
+			"cv-header-2": "5 Jahre Entwicklung an Gradle (Gradle 3 bis Gradle 7)",
+			"cv-header-3": "1+ Jahre Berater und Trainer für Gradle",
+			"cv-and-more": "und mehr",
+			"cv-phd": "Promotion zu komponentenbasierter Softwareentwicklung",
+			"cv-company": "Mitgründer einer Softwarefirma",
+			"cv-app": "Entwicklung eines erfolgreichen Android-Games",
+			"cv-talks": "Vorträge gehalten",
+			"cv-articles": "Artikel geschrieben",
+			"cv-training": "Gradle-Trainings durchführen",
+			"cv-consulting": "Teams mit Gradle-Projekten unterstützen",
+			"cv-online": "Videoserie über Gradle",
+			"cv-plugins": "Entwicklung von Gradle-Plugins",
 
 			"training-title0": "Moderne\nGradle Grundlagen (1\u00a0Tag)",
 			"training-title1": "Grundlagen Testing Dependencies (2\u00a0Tage)",
@@ -205,7 +244,7 @@ i18next.init({
 	}
 }, function(_, _) {
 	jqueryI18next.init(i18next, $);
-	$('.content').localize();
+	$('.allcontent').localize();
 });
 
 Datepicker.locales.de = {

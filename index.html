@@ -7,9 +7,16 @@
     <link rel="stylesheet" href="css/datepicker.min.css" >
     <link rel="stylesheet" href="css/styles.css" >
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
+    <link rel="alternate" hreflang="en" href="https://onepiece.software/en.html" />
+    <link rel="alternate" hreflang="de" href="https://onepiece.software/de.html" />
+    <link rel="alternate" hreflang="x-default" href="https://onepiece.software/" />
+
+    <meta name="viewport" content="width=device-width">
 </head>
 
-<body><div class="content">
+<body>
+<div class="allcontent">
 
 <div style="text-align: right;">
   <button class="lang" id="en">English</button>
@@ -18,23 +25,60 @@
 
 <h1 class="main">onepiece.Software</h1>
 <h1 class="sub" data-i18n="main-header"></h1>
-<div>by <i><a href="#jendrik">Jendrik Johannes</a></i></div>
 
-<div style="font-size: 35px; padding-top: 20px;">
+<div class="content">
+<div>by <i><a href="#jendrik">Jendrik Johannes</a></i></div>
+<div style="font-size: 35px; padding-top: 1vw;">
     <a href="https://twitter.com/jeoj" title="Twitter"><i class="fab fa-twitter fa-fw"></i></a>
     <a href="https://github.com/jjohannes" title="GitHub"><i class="fab fa-github fa-fw"></i></a>
     <a href="https://www.youtube.com/playlist?list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE" title="YouTube"><i class="fab fa-youtube fa-fw"></i></a>
     <a href="mailto:jendrik@onepiece.software" title="Mail"><i class="fas fa-envelope fa-fw"></i></a>
 </div>
 
-<div style="padding-top: 20px;">
+<div style="padding-top: 1vw;">
   <button><a class="button" href="#training"   data-i18n="button-training"></a></button>
   <button><a class="button" href="#consulting" data-i18n="button-consulting"></a></button>
   <button><a class="button" href="#online"     data-i18n="button-online"></a></button>
   <button><a class="button" href="#plugins"    data-i18n="button-plugins"></a></button>
 </div>
 
-<h2 id="training"><img src="img/gradle-icon.png"> <span data-i18n="header-training"></span> <img src="img/gradle-icon.png"></h2>
+<h2 id="jendrik" data-i18n="header-me"></h2>
+<h2 class="sub"></h2>
+<img src="img/jendrik.png" alt="Jendrik Johannes" style="border-radius: 50%;"/>
+<section>
+  <div class="box">
+    <ul>
+      <li><b data-i18n="cv-header-3"></b></li>
+      <li>
+        🥋&nbsp;<a href="#training" data-i18n="cv-training"></a> 
+        🚀&nbsp;<a href="#consulting" data-i18n="cv-consulting"></a> 
+        🎞️&nbsp;<a href="#online" data-i18n="cv-online"></a> 
+        🔌&nbsp;<a href="#plugins" data-i18n="cv-plugins"></a> 
+        🐘&nbsp;<a target="_blank" href="https://gradle.org/fellowship">Gradle Fellow</a> 
+      </li>
+      <li><b data-i18n="cv-header-2"></b></li>
+      <li>
+        🧵&nbsp;<a target="_blank" href="https://github.com/gradle/gradle/pulls?q=is%3Apr+author%3Ajjohannes+is%3Aclosed+Dependency+Constraints">Dependency Constraints</a> 
+        📜&nbsp;<a target="_blank" href="https://github.com/gradle/gradle/pulls?q=is%3Apr+author%3Ajjohannes+is%3Aclosed+Component+Metadata+Rules">Component Metadata Rules</a> 
+        🛰️&nbsp;<a target="_blank" href="https://github.com/gradle/gradle/pulls?q=is%3Apr+author%3Ajjohannes+is%3Aclosed+Publishing">Publishing</a> 
+        📦&nbsp;<a target="_blank" href="https://github.com/gradle/gradle/pulls?q=is%3Apr+author%3Ajjohannes+is%3Aclosed+label%3Ain%3Amodular-java">Java Module System</a> 
+        📃&nbsp;<a target="_blank" href="https://github.com/gradle/gradle/pulls?q=is%3Apr+author%3Ajjohannes+is%3Aclosed+sample">Docs, Samples, Init</a> 
+        ✨&nbsp;<a target="_blank" href="https://github.com/gradle/gradle/pulls?q=is%3Apr+author%3Ajjohannes+is%3Aclosed" data-i18n="cv-and-more"></a> 
+      </li>
+      <li><b data-i18n="cv-header-1"></b></li>
+      <li>
+        🎓&nbsp;<a href="software-reuse/project/2010/01/06/PhD.html" data-i18n="cv-phd"></a> 
+        🚀&nbsp;<a href="software-reuse/project/2012/02/06/DevBoost.html" data-i18n="cv-company"></a> 
+        🤖&nbsp;<a href="game-dev/project/2016/02/02/Tribal_Wars_2_Android.html" data-i18n="cv-app"></a> 
+        🧑‍🏫&nbsp;<a href="categories/talk.html" data-i18n="cv-talks"></a> 
+        📰&nbsp;<a href="categories/magazine%20article.html" data-i18n="cv-articles"></a> 
+        ✨&nbsp;<a href="cv.html" data-i18n="cv-and-more"></a> 
+      </li>
+    </ul>
+  </div>
+</section>
+
+<h2 id="training"><span data-i18n="header-training"></span></h2>
 <h2 class="sub" data-i18n="header-training-sub"></h2>
 
 <section>
@@ -57,26 +101,26 @@
     <ul>
       <li><b data-i18n="t-phylosophy"></b></li>
       <li>
-        <span>🧬 <span data-i18n="t-modelling"></span></span>
-        <span>💬 Gradle DSL</span>
+        <span>🧬&nbsp;<span data-i18n="t-modelling"></span></span>
+        <span>💬&nbsp;Gradle DSL</span>
       </li>
       <li><b data-i18n="t-structure"></b></li>
       <li>
-        <span>📝 Settings File</span> 
-        <span>🗂️ Build Files</span> 
-        <span>🔌 Plugins</span> 
-        <span>✏️ Build Configuration <span data-i18n="w-with"></span> Convention Plugins</span></li>
+        <span>📝&nbsp;Settings File</span> 
+        <span>🗂️&nbsp;Build Files</span> 
+        <span>🔌&nbsp;Plugins</span> 
+        <span>✏️&nbsp;Build Configuration <span data-i18n="w-with"></span> Convention Plugins</span></li>
       <li><b data-i18n="t-efficient"></b></li>
       <li>
-        <span>▶️ Tasks</span> 
-        <span>↔️ Task Inputs/Outputs</span> 
-        <span>🔄 Task Dependencies</span> 
-        <span>🏎️ Incremental Builds</span> 
-        <span>🗄️ Build Cache</span> 
-        <span>📋 <span data-i18n="t-task-configure"></span></span> 
-        <span>🐒 <span data-i18n="t-task-implement"></span></span> 
-        <span>🦥 Lazy Configuration</span> 
-        <span>💨 Configuration vs. Execution Time</span>
+        <span>▶️&nbsp;Tasks</span> 
+        <span>↔️&nbsp;Task Inputs/Outputs</span> 
+        <span>🔄&nbsp;Task Dependencies</span> 
+        <span>🏎️&nbsp;Incremental Builds</span> 
+        <span>🗄️&nbsp;Build Cache</span> 
+        <span>📋&nbsp;<span data-i18n="t-task-configure"></span></span> 
+        <span>🐒&nbsp;<span data-i18n="t-task-implement"></span></span> 
+        <span>🦥&nbsp;Lazy Configuration</span> 
+        <span>💨&nbsp;Configuration vs. Execution Time</span>
       </li>
     </ul>
   </div>
@@ -85,35 +129,35 @@
     <ul>
       <li><b>Dependency Management <span data-i18n="w-with"></span> Gradle</b></li>
       <li>
-        <span id="d-java0">🔍 Dependency Scopes (implementation/api/runtimeOnly)</span>
+        <span id="d-java0">🔍&nbsp;Dependency Scopes (implementation/api/runtimeOnly)</span>
 
-        <span id="d-modules0" class="invisible">📄 moulde-info.java</span>
-        <span id="d-modules1" class="invisible">🔍 Require Directives (require/transitive/static)</span>
-        <span id="d-modules2" class="invisible">🧳 Non-Module Jars</span>
+        <span id="d-modules0" class="invisible">📄&nbsp;moulde-info.java</span>
+        <span id="d-modules1" class="invisible">🔍&nbsp;Require Directives (require/transitive/static)</span>
+        <span id="d-modules2" class="invisible">🧳&nbsp;Non-Module Jars</span>
 
-        <span id="d-android0" class="invisible">🧺 Build Types</span>
-        <span id="d-android1" class="invisible">⛱️ Flavors</span>
+        <span id="d-android0" class="invisible">🧺&nbsp;Build Types</span>
+        <span id="d-android1" class="invisible">⛱️&nbsp;Flavors</span>
 
-        <span>🧞 Configurations <span data-i18n="w-and"></span> Variants</span>
-        <span>🗄️ Maven Repositories</span>
-        <span>🔥 Version Confilicts</span>
-        <span>❄️ Capability Confilicts</span>
-        <span>📜 Component Metadata Rules</span>
-        <span>🧵 Centralizing Versions</span>
+        <span>🧞&nbsp;Configurations <span data-i18n="w-and"></span> Variants</span>
+        <span>🗄️&nbsp;Maven Repositories</span>
+        <span>🔥&nbsp;Version Confilicts</span>
+        <span>❄️&nbsp;Capability Confilicts</span>
+        <span>📜&nbsp;Component Metadata Rules</span>
+        <span>🧵&nbsp;Centralizing Versions</span>
       </li>
       <li><b>Testing <span data-i18n="w-with"></span> Gradle</b></li>
       <li>
-        <span>🗂️ Source Sets</span>
-        <span>🎁 Test Suites</span>
-        <span id="d-modules3" class="invisible">📦 Whitebox vs. Blackbox</span>
-        <span id="d-android2" class="invisible">📱 On-device Tests</span>
+        <span>🗂️&nbsp;Source Sets</span>
+        <span>🎁&nbsp;Test Suites</span>
+        <span id="d-modules3" class="invisible">📦&nbsp;Whitebox vs. Blackbox</span>
+        <span id="d-android2" class="invisible">📱&nbsp;On-device Tests</span>
         <span>5️⃣ Testing <span data-i18n="w-with"></span> JUnit 5</span> 
-        <span>📝 <span data-i18n="t-task-configure-test"></span></span> 
-        <span>🗂️ Integration <span data-i18n="w-and"></span> End-to-End Tests</span> 
-        <span>⛓️ Parallel Test Execution</span> 
-        <span>🗒️ Test Reporting</span>
-        <span>🚦 Code Coverage</span>
-        <span>🧰 Test Fixtures</span>
+        <span>📝&nbsp;<span data-i18n="t-task-configure-test"></span></span> 
+        <span>🗂️&nbsp;Integration <span data-i18n="w-and"></span> End-to-End Tests</span> 
+        <span>⛓️&nbsp;Parallel Test Execution</span> 
+        <span>🗒️&nbsp;Test Reporting</span>
+        <span>🚦&nbsp;Code Coverage</span>
+        <span>🧰&nbsp;Test Fixtures</span>
       </li>
     </ul>
   </div>
@@ -122,15 +166,15 @@
     <ul>
       <li><b data-i18n="t-maitaining"></b></li>
       <li>
-        <span>🧶 <span data-i18n="t-lifecycle-tasks"></span></span>
-        <span>🧱 <span data-i18n="t-build-app"></span></span>
-        <span>📖 <span data-i18n="t-structuring"></span></span>
-        <span>ℹ️ <span data-i18n="t-help-tasks"></span></span>
-        <span>💬 <span data-i18n="t-dep-analysis"></span></span>
-        <span>🔧 <span data-i18n="t-tune"></span></span>
-        <span>🚀 <span data-i18n="t-local"></span></span>
-        <span>🚢 <span data-i18n="t-ci"></span></span>
-        <span>📠 <span data-i18n="t-scans"></span></span>
+        <span>🧶&nbsp;<span data-i18n="t-lifecycle-tasks"></span></span>
+        <span>🧱&nbsp;<span data-i18n="t-build-app"></span></span>
+        <span>📖&nbsp;<span data-i18n="t-structuring"></span></span>
+        <span>ℹ️&nbsp;<span data-i18n="t-help-tasks"></span></span>
+        <span>💬&nbsp;<span data-i18n="t-dep-analysis"></span></span>
+        <span>🔧&nbsp;<span data-i18n="t-tune"></span></span>
+        <span>🚀&nbsp;<span data-i18n="t-local"></span></span>
+        <span>🚢&nbsp;<span data-i18n="t-ci"></span></span>
+        <span>📠&nbsp;<span data-i18n="t-scans"></span></span>
       </li>
     </ul>
   </div>
@@ -138,7 +182,8 @@
 
   <div class="box invisible" id="individual">
     <ul>
-      <li><b data-i18n="training-tailored" style="font-size: 26px;"></b></li>
+      <li><b data-i18n="training-tailored"></b></li>
+      <li>&nbsp;</li>
     </ul>
   </div>
 
@@ -182,34 +227,34 @@
   </div>
 </section>
 
-<h2 id="consulting"><img src="img/gradle-icon.png"> <span data-i18n="header-consulting"></span> <img src="img/gradle-icon.png"></h2>
+<h2 id="consulting"><span data-i18n="header-consulting"></span></h2>
 <h2 class="sub"></h2>
 
 <section>
   <div class="box">
     <ul>
       <li><b data-i18n="consulting-1"></b></li>
-      <li>✨ <span data-i18n="consulting-2"></span></li>
-      <li>🏁 <span data-i18n="consulting-3"></span></li>
-      <li>📦 <span data-i18n="consulting-4"></span></li>
-      <li>🐜 <span data-i18n="consulting-5"></span></li>
-      <li>📞 <span data-i18n="consulting-6"></span></li>
-      <li>💬 <span data-i18n="consulting-7"></span></li>
+      <li>✨&nbsp;<span data-i18n="consulting-2"></span></li>
+      <li>🏁&nbsp;<span data-i18n="consulting-3"></span></li>
+      <li>📦&nbsp;<span data-i18n="consulting-4"></span></li>
+      <li>🐜&nbsp;<span data-i18n="consulting-5"></span></li>
+      <li>📞&nbsp;<span data-i18n="consulting-6"></span></li>
+      <li>💬&nbsp;<span data-i18n="consulting-7"></span></li>
     </ul>
   </div>
   <div class="box">
     <ul>
       <li><b data-i18n="consulting-8"></b></li>
       <li>
-        <span>☕ Java</span>
-        <span>🏝️ Kotlin</span>
-        <span>📦 Java Modules</span>
-        <span>🤖 Android</span>
-        <span>⭐ Groovy</span>
-        <span>💈 Scala</span>
-        <span>🐈‍⬛ Web Applications</span>
-        <span>🍃 Spring Boot</span>
-        <span>😀 [Your Software]</span>
+        <span>☕&nbsp;Java</span>
+        <span>🏝️&nbsp;Kotlin</span>
+        <span>📦&nbsp;Java Modules</span>
+        <span>🤖&nbsp;Android</span>
+        <span>⭐&nbsp;Groovy</span>
+        <span>💈&nbsp;Scala</span>
+        <span>🐈‍⬛&nbsp;Web&nbsp;Applications</span>
+        <span>🍃&nbsp;Spring&nbsp;Boot</span>
+        <span>😀&nbsp;[Your&nbsp;Software]</span>
       </li>
     </ul>
   </div>
@@ -240,7 +285,7 @@
   </div>
 </section>
 
-<h2 id="online"><img src="img/gradle-icon.png"> <span data-i18n="header-online"></span> <img src="img/gradle-icon.png"></h2>
+<h2 id="online"><span data-i18n="header-online"></span></h2>
 <h2 class="sub"></h2>
 <section>
   <div class="box">
@@ -496,7 +541,7 @@
   </div>
 </section>
 
-<h2 id="plugins"><img src="img/gradle-icon.png"> <span data-i18n="header-plugins"></span> <img src="img/gradle-icon.png"></h2>
+<h2 id="plugins"><span data-i18n="header-plugins"></span></h2>
 <h2 class="sub"></h2>
 <section>
   <div class="box">
@@ -512,21 +557,14 @@
 </section>
 
 
-<h2 id="jendrik" data-i18n="header-me"></h2>
+<h2>onepiece.Software</h2>
 <h2 class="sub"></h2>
 <section>
-  <table>
-    <tr>
-      <td>
-        <img src="img/jendrik.png" alt="Jendrik Johannes" style="margin: 5px;"/>
-      </td>
-      <td>
-        <div class="justify" style="margin-left: 20px;" data-i18n="[html]about-me"></div>
-      </td>
-    </tr>
-  </table>
-  <a href="cv.html" data-i18n="header-other-sub"></a> 
+  <div class="box">
+    <div class="justify" data-i18n="[html]onepiece"></div>
+  </div>
 </section>
+<h2 class="sub"></h2>
 
 <h2></h2>
 <div class="contact">
@@ -549,6 +587,7 @@
     Ust-IdNr: DE343201228
 </div>
 
+</div>
 </div>
 
 <script src="js/jquery.min.js"></script>
