@@ -102,7 +102,7 @@ i18next.init({
 			"t-scans": "Analysing issues with Build Scans",
 
 			"consulting-1": "Individual help with your project",
-			"consulting-2": "Modernizing a Gradle project for better maintainabiltiy and faster builds",
+			"consulting-2": "Modernizing a Gradle project for better maintainability and faster builds",
 			"consulting-3": "Starting a new project with a structure that is ready for growth",
 			"consulting-4": "Migrating to the Java Module System",
 			"consulting-5": "Migrating from Ant/Maven to Gradle",
