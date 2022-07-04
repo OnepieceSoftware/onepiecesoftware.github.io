@@ -122,7 +122,7 @@ button:hover:before {
     width: 100%;
 }
 button.small {
-    width: 154px;
+    width: 152px;
     white-space: pre-line;
 }
 button.long {
