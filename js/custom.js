@@ -443,7 +443,7 @@ function refreshCalendar(language) {
 
 function bookSlot(date, training) {
 	const xhr = new XMLHttpRequest();
-	xhr.open("POST", "https://h2790261.stratoserver.net:32565/onepiece_appointment", true);
+	xhr.open("POST", "https://gradle.onepiece.software:32565/onepiece_appointment", true);
 	xhr.setRequestHeader('Content-Type', 'application/json');
 	xhr.onreadystatechange = function (oEvent) {
 		if (xhr.readyState === 4) {
