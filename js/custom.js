@@ -43,7 +43,7 @@ i18next.init({
 
 			"cv-header-1": "20+ years experience in software development",
 			"cv-header-2": "5 years working on Gradle (Gradle 3 to Gradle 7)",
-			"cv-header-3": "2+ years consultant and trainer for Gradle",
+			"cv-header-3": "4+ years consultant and trainer for Gradle",
 			"cv-and-more": "and more",
 			"cv-phd": "PhD on Component-based Software Development",
 			"cv-company": "co-founded a bootstrapped company",
@@ -155,7 +155,7 @@ i18next.init({
 
 			"cv-header-1": "20+ Jahre Erfahrung in der Softwareentwicklung",
 			"cv-header-2": "5 Jahre Entwicklung an Gradle (Gradle 3 bis Gradle 7)",
-			"cv-header-3": "2+ Jahre Berater und Trainer für Gradle",
+			"cv-header-3": "4+ Jahre Berater und Trainer für Gradle",
 			"cv-and-more": "und mehr",
 			"cv-phd": "Promotion zu komponentenbasierter Softwareentwicklung",
 			"cv-company": "Mitgründer einer Softwarefirma",
