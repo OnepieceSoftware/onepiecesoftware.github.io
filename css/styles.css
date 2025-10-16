@@ -180,6 +180,13 @@ ul {
     position: relative;
 }
 
+.video-preview-large {
+    width: 240px;
+    height: 135px;
+    display: inline-block;
+    position: relative;
+}
+
 .video-preview-course {
     width: 364px;
     position: relative;
@@ -202,6 +209,22 @@ ul {
     background-color: rgba(0, 255, 255, 0.4);
 }
 
+.overlay-large {
+    width: 240px;
+    height: 85px;
+    position: absolute;
+    font-size: 45px;
+    text-align: center;
+    padding-top: 50px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: rgba(255, 255, 0, 0.4);
+}
+
 .overlay-course {
     width: 364px;
     height: 148px;
@@ -219,6 +242,10 @@ ul {
 }
 
 .video-preview:hover .overlay {
+    opacity: 1;
+}
+
+.video-preview-large:hover .overlay-large {
     opacity: 1;
 }
 
