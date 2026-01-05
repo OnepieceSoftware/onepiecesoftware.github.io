@@ -72,7 +72,6 @@ i18next.init({
 			"training-tailored": "Training tailored to your needs (pick from topics below and more) - let's chat!",
 			"training-select": "I am interested in:",
 			"training-mail": "Contact via Mail*",
-			"training-select-date": "Select a date for options",
 			"training-consent": "* By submitting a request, you consent that the data entered in the form, including the provided contact information, is stored by me to process your request and for follow-up communication. This data will not be forwarded to others without your consent.",
 		
 			"training-basics-title": "In each of my trainings you will learn",
@@ -184,7 +183,6 @@ i18next.init({
 			"training-tailored": "Individuell zusammengestellt (Auswahl aus folgenden Themen und mehr)",
 			"training-select": "Ich interessiere mich für:",
 			"training-mail": "Kontakt per Mail*",
-			"training-select-date": "Datum wählen für Termine",
 			"training-consent": "*Durch Absenden einer Anfrage stimmen Sie damit überein, dass die Angaben aus dem Formular, inklusive der von Ihnen dort angegebenen Kontaktdaten, zwecks Bearbeitung der Anfrage, und für den Fall von Anschlussfragen, bei mir gespeichert werden. Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter.",
 
 			"training-basics-title": "Jedes Training vermittelt",
@@ -246,19 +244,6 @@ i18next.init({
 	jqueryI18next.init(i18next, $);
 	$('.allcontent').localize();
 });
-
-Datepicker.locales.de = {
-	days: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"],
-	daysShort: ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],
-	daysMin: ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],
-	months: ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
-	monthsShort: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
-	today: "Heute",
-	monthsTitle: "Monate",
-	clear: "Löschen",
-	weekStart: 1,
-	format: "dd.mm.yyyy"
-};
 
 const day1 = document.getElementById('day1')
 const day2 = document.getElementById('day2')
@@ -352,11 +337,6 @@ for (let i = 0; i < 6; i++) {
 	}
 }
 
-const calendarElement = document.getElementById('calendar')
-const calendarElement2 = document.getElementById('calendar2')
-const slotContainer = document.getElementById('slot-container')
-const slotContainer2 = document.getElementById('slot-container2')
-
 const notYetBooked1 = document.getElementById('not-yet-booked1')
 const notYetBooked2 = document.getElementById('not-yet-booked2')
 const slotBooked1 = document.getElementById('slot-booked1')
@@ -374,24 +354,12 @@ const companyInput2  = document.getElementById('input-company2')
 const messageInput2 = document.getElementById('input-message2')
 
 const mailButton = document.getElementById('button-mail')
-mailButton.onclick = () => bookSlot(null, true)
+mailButton.onclick = () => bookSlot(true)
 const mailButton2 = document.getElementById('button-mail2')
-mailButton2.onclick = () => bookSlot(null, false)
+mailButton2.onclick = () => bookSlot(false)
 
-let freeSlots = []
 let dateButtons = [mailButton]
 let dateButtons2 = [mailButton2]
-
-window.onload = () => refreshCalendar(htmlLang)
-
-function formatDate(date) {
-	if (!date) return 'no date'
-
-	return date.toLocaleDateString(htmlLang) + ", " + date.getHours() + ":" + date.getMinutes().toLocaleString(htmlLang, {
-		minimumIntegerDigits: 2,
-		useGrouping: false
-	  }) + ' CET*'
-}
 
 function validateInput() {
 	dateButtons.forEach(b => b.disabled = nameInput.value.length == 0 || !mailInput.value.toLowerCase().match(
@@ -409,58 +377,25 @@ mailInput.oninput = validateInput
 nameInput2.oninput = validateInput2
 mailInput2.oninput = validateInput2
 
-function refreshCalendar(language) {
-	calendarElement.innerHTML = ''
-	calendarElement2.innerHTML = ''
-	freeSlots = []
-
-    var calendarid = '9tdafu7cm4fephs8o7uqrulgvc@group.calendar.google.com';
-    var mykey = 'AIzaSyDMO1QbbTzJEkcfo3Ydvr9EOIjdTwTezgw';
-    $.ajax({
-        type: 'GET',
-        url: encodeURI('https://www.googleapis.com/calendar/v3/calendars/' + calendarid + '/events?key=' + mykey),
-        dataType: 'json',
-        success: function (response) {
-			response.items.forEach(item => {
-				freeSlots.push(new Date(item.start.dateTime));
-			}); 
-			new Datepicker(calendarElement, {
-				language: language,
-				beforeShowDay: function (date) {
-				return !!freeSlots.find(s => s.toDateString() == date.toDateString()); }
-			});
-			new Datepicker(calendarElement2, {
-				language: language,
-				beforeShowDay: function (date) {
-				return !!freeSlots.find(s => s.toDateString() == date.toDateString()); }
-			});
-        },
-        error: function (response) {
-            console.log(response)
-        }
-    });
-}
-
-function bookSlot(date, training) {
+function bookSlot(training) {
 	const xhr = new XMLHttpRequest();
 	xhr.open("POST", "https://mailer.onepiece.software/onepiece_appointment", true);
 	xhr.setRequestHeader('Content-Type', 'application/json');
 	xhr.onreadystatechange = function (oEvent) {
 		if (xhr.readyState === 4) {
 			if (xhr.status != 200) {
-			   alert("Something went wrong. Please contat me directly: jendrik@onepiece.software");
+			   alert("Something went wrong. Please contact me directly: jendrik@onepiece.software");
 			}
 		}
 	};
 	xhr.onload = () => {
-		// bookedDate.textContent = formatDate(date)
 		notYetBooked1.classList.add("invisible")
 		notYetBooked2.classList.add("invisible")
 		slotBooked1.classList.remove("invisible")
 		slotBooked2.classList.remove("invisible")
     };
 	xhr.send(JSON.stringify({
-		date: date?.getTime(),
+		date: 0,
 		name: training ? nameInput.value : nameInput2.value,
 		mail: training ? mailInput.value : mailInput2.value,
 		company: training ? companyInput.value : companyInput2.value,
@@ -470,39 +405,3 @@ function bookSlot(date, training) {
 		trainingSelected: trainingSelect.value
 	}));
 }
-
-calendarElement.addEventListener("changeDate", function (e) {
-	const selectedDate = e.detail.date
-	const slotsOnDay = freeSlots.filter(s => s.toDateString() == selectedDate.toDateString())
-
-	slotContainer.innerHTML = ''
-	dateButtons = [mailButton]
-	slotsOnDay.sort((a, b) => a - b).forEach(s => {
-		const dateButton = document.createElement("button")
-		dateButton.classList.add('long')
-		dateButton.textContent = "Video Call " + formatDate(s) + "\u00A0\u00A0"
-		dateButton.onclick = () => bookSlot(s, true);
-		dateButton.disabled = true;
-		slotContainer.appendChild(dateButton);
-		dateButtons.push(dateButton);
-	})
-	validateInput()
-}, false)
-
-calendarElement2.addEventListener("changeDate", function (e) {
-	const selectedDate = e.detail.date
-	const slotsOnDay = freeSlots.filter(s => s.toDateString() == selectedDate.toDateString())
-
-	slotContainer2.innerHTML = ''
-	dateButtons2 = [mailButton2]
-	slotsOnDay.sort((a, b) => a - b).forEach(s => {
-		const dateButton = document.createElement("button")
-		dateButton.classList.add('long')
-		dateButton.textContent = "Video Call " + formatDate(s) + "\u00A0\u00A0"
-		dateButton.onclick = () => bookSlot(s, false);
-		dateButton.disabled = true;
-		slotContainer2.appendChild(dateButton);
-		dateButtons2.push(dateButton);
-	})
-	validateInput2();
-}, false)
